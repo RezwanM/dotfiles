@@ -66,6 +66,9 @@ xterm*|rxvt*)
     ;;
 esac
 
+# for keeping memory of frequently-visited directories
+alias cd='z'
+
 # for colored and formatted output when listing files and directories
 alias ls='eza'
 
@@ -73,7 +76,16 @@ alias ls='eza'
 alias tree='erd --layout=inverted'
 
 # for colored and formatted output when comparing files
-alias diff='colordiff'
+alias diff='delta --side-by-side'
+
+# for colored and formatted output when listing running processes
+alias top='btm'
+
+# for colored and formatted output when checking file disk usage
+alias du='dust -r -d=1'
+
+# for colored and formatted output when concatenating files
+alias cat='bat'
 
 # enable programmable completion features
 if ! shopt -oq posix; then
@@ -87,8 +99,11 @@ fi
 # use colorized prompt from starship.rs
 eval "$(starship init bash)"
 
-# turn on vi mode for the shell
-set -o vi
+# initialize the zoxide environment
+eval "$(zoxide init zsh)"
 
 # add fzf default key bindings
 eval "$(fzf --bash)"
+
+# turn on vi mode for the shell
+set -o vi
