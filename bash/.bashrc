@@ -76,7 +76,7 @@ alias ls='eza'
 alias tree='erd --layout=inverted'
 
 # for colored and formatted output when comparing files
-alias diff='delta --side-by-side'
+alias diff='delta'
 
 # for colored and formatted output when listing running processes
 alias top='btm'
