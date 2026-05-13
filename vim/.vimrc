@@ -14,7 +14,10 @@ set showmatch
 set tabstop=4
 set termguicolors
 set viminfo='25,\"50,n~/.viminfo
+set nomodeline
+set shortmess-=S
 syntax on
+packadd! hlyank
 if has ("autocmd")
     autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
         \ | exe "normal g`\""
