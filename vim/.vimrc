@@ -16,6 +16,8 @@ set termguicolors
 set viminfo='25,\"50,n~/.viminfo
 set nomodeline
 set shortmess-=S
+set spell
+set autocomplete
 syntax on
 packadd! hlyank
 if has ("autocmd")
